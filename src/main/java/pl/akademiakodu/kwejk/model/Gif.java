@@ -5,7 +5,8 @@ public class Gif {
     private String name;
     private String username;
 
-    public Gif(){}
+    public Gif() {
+    }
 
     public String getName() {
         return name;
@@ -35,4 +36,7 @@ public class Gif {
                 ", username='" + username + '\'' +
                 '}';
     }
-}
+        public String getUrl () {
+            return getName() + ".gif";
+        }
+    }
