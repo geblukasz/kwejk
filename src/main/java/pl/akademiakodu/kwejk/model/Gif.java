@@ -1,5 +1,6 @@
 package pl.akademiakodu.kwejk.model;
 
+
 public class Gif {
     private String title;
     private String username;

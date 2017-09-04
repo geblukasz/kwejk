@@ -10,4 +10,5 @@ public class GifController {
     public String home(){
         return "home";
     }
+
 }
