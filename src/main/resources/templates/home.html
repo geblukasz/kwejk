@@ -45,17 +45,10 @@
     </div>
     <div class="gifs container">
         <div class="row">
+            <div class="col s12 l4" th:each="gif: ${gifs}"><img th:src="@{'gifs/'+${gif.name}+'.gif'}"></div>
 
         </div>
     </div>
-    <ul>
-        <li><img src="gifs/android-explosion.gif" alt=""></li>
-            <li><img src="gifs/ben-and-mike.gif" alt=""></li>
-            <li><img src="gifs/book-dominos.gif" alt=""></li>
-           <li> <img src="gifs/compiler-bot.gif" alt=""></li>
-           <li> <img src="gifs/cowboy-coder.gif" alt=""></li>
-            <li><img src="gifs/infinite-andrew.gif" alt=""></li>
-    </ul>
 
 
 <script th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>

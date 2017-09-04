@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import pl.akademiakodu.kwejk.dao.GifDao;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class GifController {
@@ -14,7 +14,8 @@ public class GifController {
     private GifDao gifDao;
 
     @GetMapping("/")
-    public String home() {
+    public String showAll(ModelMap modelMap){
+        modelMap.addAttribute("gifs",gifDao.findAll());
         return "home";
     }
 
