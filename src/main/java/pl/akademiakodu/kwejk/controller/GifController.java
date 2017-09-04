@@ -14,12 +14,12 @@ public class GifController {
     private GifDao gifDao;
 
     @GetMapping("/")
-    public String home(){
+    public String home() {
         return "home";
     }
 
     @GetMapping("/gif/{name}")
-    public String details(@PathVariable String name, ModelMap modelMap){
+    public String details(@PathVariable String name, ModelMap modelMap) {
         modelMap.addAttribute("gif", gifDao.findOne(name));
         return "gif-details";
     }
