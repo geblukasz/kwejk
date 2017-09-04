@@ -6,4 +6,7 @@ import java.util.List;
 
 public interface GifDao {
     List<Gif> findAll();
+
+    Gif findOne(String title);
+
 }

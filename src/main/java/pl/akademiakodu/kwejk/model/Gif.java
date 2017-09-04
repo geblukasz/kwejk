@@ -5,6 +5,8 @@ public class Gif {
     private String title;
     private String username;
 
+    public Gif(){}
+
     public String getTitle() {
         return title;
     }
