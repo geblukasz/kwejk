@@ -2,17 +2,17 @@ package pl.akademiakodu.kwejk.model;
 
 
 public class Gif {
-    private String title;
+    private String name;
     private String username;
 
     public Gif(){}
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getUsername() {
@@ -23,8 +23,12 @@ public class Gif {
         this.username = username;
     }
 
-    public Gif(String title, String username) {
-        this.title = title;
+    public Gif(String name, String username) {
+        this.name = name;
         this.username = username;
+    }
+
+    public String getUrl(){
+        return getName() + ".gif";
     }
 }

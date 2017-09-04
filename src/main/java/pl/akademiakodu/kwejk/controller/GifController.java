@@ -18,9 +18,9 @@ public class GifController {
         return "home";
     }
 
-    @GetMapping("/gif/{title}")
-    public String details(@PathVariable String title, ModelMap modelMap){
-        modelMap.addAttribute("gif", gifDao.findOne(title));
+    @GetMapping("/gif/{name}")
+    public String details(@PathVariable String name, ModelMap modelMap){
+        modelMap.addAttribute("gif", gifDao.findOne(name));
         return "gif-details";
     }
 }

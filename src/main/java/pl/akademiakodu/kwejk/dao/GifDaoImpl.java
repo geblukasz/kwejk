@@ -5,43 +5,47 @@ import pl.akademiakodu.kwejk.model.Gif;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
 public class GifDaoImpl implements GifDao {
 
     public GifDaoImpl(){}
 
-    private static List<String> titles = new ArrayList<>();
+    private static List<String> names = new ArrayList<>();
 
-    public static List<String> getTitles() {
-        return titles;
+    public static List<String> getNames() {
+        return names;
     }
 
-    public static void setTitles(List<String> titles) {
-        GifDaoImpl.titles = titles;
+    public static void setNames(List<String> names) {
+        GifDaoImpl.names = names;
     }
 
     static{
-        titles.add("android-explosion");
-        titles.add("ben-and-mike");
-        titles.add("book-dominos");
-        titles.add("compiler-bot");
-        titles.add("cowboy-coder");
-        titles.add("infinite-andrew");
+        names.add("android-explosion");
+        names.add("ben-and-mike");
+        names.add("book-dominos");
+        names.add("compiler-bot");
+        names.add("cowboy-coder");
+        names.add("infinite-andrew");
     }
     @Override
     public List<Gif> findAll() {
         List<Gif> gifs = new ArrayList<>();
         int i = 1;
-        for(String title : titles){
-            gifs.add(new Gif(title, "username"+i++));
+        for(String name : names){
+            gifs.add(new Gif(name, "username"+i++));
         }
         return gifs;
     }
 
     @Override
-    public Gif findOne(String title){
+    public Gif findOne(String name){
+        for(Gif gif: findAll()){
+            if (gif.getName().equals(name)){
+                return gif;
+            }
+        }
         return null;
     }
 }
