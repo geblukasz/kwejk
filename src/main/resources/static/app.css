@@ -213,6 +213,15 @@ nav ul li.active, nav ul li:hover {
     background-color: #896bb3;
 }
 
+.input-field input[type="submit"] {
+    float: right;
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    top: 3px;
+    font-size: 30px;
+}
+
 .chip {
     margin-bottom: 1rem;
     margin-top: -1rem;

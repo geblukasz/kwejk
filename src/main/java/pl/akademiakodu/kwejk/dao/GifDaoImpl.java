@@ -33,12 +33,12 @@ public class GifDaoImpl implements GifDao {
 
     @Override
     public List<Gif> findAll() {
-        List<Gif> gifs = new ArrayList<>();
+        List<Gif> gif = new ArrayList<>();
         int i = 1;
         for (String name : names) {
-            gifs.add(new Gif(name, "username" + i++));
+            gif.add(new Gif(name, "username" + i++));
         }
-        return gifs;
+        return gif;
     }
 
     @Override
