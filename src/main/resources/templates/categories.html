@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" th:href="@{/app.css}" />
 
-    <name>Categories</name>
+    <title>Categories</title>
 </head>
 <body>
 <div class="navbar-fixed">
@@ -49,7 +49,7 @@
         <div th:each="category : ${categories}" class="col s12 l4">
             <div class="card">
                 <div class="card-content">
-                    <div class="card-name">
+                    <div class="card-title">
                      
                         <a th:href="@{'/category/' + ${category.id}}" th:text="${category.name}">Category Name</a>
                     </div>

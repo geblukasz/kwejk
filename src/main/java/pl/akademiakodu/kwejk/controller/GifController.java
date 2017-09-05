@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import pl.akademiakodu.kwejk.dao.GifDao;
 import org.springframework.web.bind.annotation.PathVariable;
-import pl.akademiakodu.kwejk.dao.GifDaoImpl;
 
 @Controller
 public class GifController {
@@ -16,8 +15,8 @@ public class GifController {
     private GifDao gifDao;
 
     @GetMapping("/")
-    public String showAll(ModelMap modelMap){
-        modelMap.addAttribute("gif",gifDao.findAll());
+    public String showAll(ModelMap modelMap) {
+        modelMap.addAttribute("gif", gifDao.findAll());
         return "home";
     }
 
@@ -34,4 +33,12 @@ public class GifController {
             modelMap.addAttribute("comment","Nie ma takiego gifa!");
         return "home";
     }
+
+    @GetMapping("/favorites")
+    public String home(ModelMap modelMap) {
+        modelMap.addAttribute("gifs",gifDao.getFavorites());
+        System.out.println("ilość"+gifDao.getFavorites().size());
+        return "favorites";
+    }
+
 }
