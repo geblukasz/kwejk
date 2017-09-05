@@ -9,7 +9,8 @@ import java.util.List;
 @Component
 public class GifDaoImpl implements GifDao {
 
-    public GifDaoImpl(){}
+    public GifDaoImpl() {
+    }
 
     private static List<String> names = new ArrayList<>();
 
@@ -21,7 +22,7 @@ public class GifDaoImpl implements GifDao {
         GifDaoImpl.names = names;
     }
 
-    static{
+    static {
         names.add("android-explosion");
         names.add("ben-and-mike");
         names.add("book-dominos");
@@ -34,16 +35,16 @@ public class GifDaoImpl implements GifDao {
     public List<Gif> findAll() {
         List<Gif> gifs = new ArrayList<>();
         int i = 1;
-        for(String name : names){
-            gifs.add(new Gif(name, "username"+i++));
+        for (String name : names) {
+            gifs.add(new Gif(name, "username" + i++));
         }
         return gifs;
     }
 
     @Override
-    public Gif findOne(String name){
-        for(Gif gif: findAll()){
-            if (gif.getName().equals(name)){
+    public Gif findOne(String name) {
+        for (Gif gif : findAll()) {
+            if (gif.getName().equals(name)) {
                 return gif;
             }
         }

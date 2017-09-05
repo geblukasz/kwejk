@@ -5,8 +5,7 @@ public class Gif {
     private String name;
     private String username;
 
-    public Gif() {
-    }
+    public Gif() {}
 
     public String getName() {
         return name;
@@ -29,14 +28,7 @@ public class Gif {
         this.username = username;
     }
 
-    @Override
-    public String toString() {
-        return "Gif{" +
-                "name='" + name + '\'' +
-                ", username='" + username + '\'' +
-                '}';
+    public String getUrl() {
+        return getName() + ".gif";
     }
-        public String getUrl () {
-            return getName() + ".gif";
-        }
-    }
+}
