@@ -14,8 +14,8 @@ public class GifController {
     private GifDao gifDao;
 
     @GetMapping("/")
-    public String showAll(ModelMap modelMap){
-        modelMap.addAttribute("gifs",gifDao.findAll());
+    public String showAll(ModelMap modelMap) {
+        modelMap.addAttribute("gifs", gifDao.findAll());
         return "home";
     }
 
@@ -31,4 +31,5 @@ public class GifController {
         System.out.println("ilość"+gifDao.getFavorites().size());
         return "favorites";
     }
+
 }
