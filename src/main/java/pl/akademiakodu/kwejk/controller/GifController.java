@@ -14,8 +14,8 @@ public class GifController {
     private GifDao gifDao;
 
     @GetMapping("/")
-    public String showAll(ModelMap modelMap){
-        modelMap.addAttribute("gifs",gifDao.findAll());
+    public String showAll(ModelMap modelMap) {
+        modelMap.addAttribute("gifs", gifDao.findAll());
         return "home";
     }
 
@@ -25,8 +25,4 @@ public class GifController {
         return "gif-details";
     }
 
-    @GetMapping("/categories")
-    public String showCategories(){
-        return "categories";
-    }
 }

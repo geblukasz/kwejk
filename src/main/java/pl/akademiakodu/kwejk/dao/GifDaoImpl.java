@@ -1,6 +1,7 @@
 package pl.akademiakodu.kwejk.dao;
 
 import org.springframework.stereotype.Component;
+import pl.akademiakodu.kwejk.model.Category;
 import pl.akademiakodu.kwejk.model.Gif;
 
 import java.util.ArrayList;
@@ -40,6 +41,7 @@ public class GifDaoImpl implements GifDao {
         }
         return gifs;
     }
+
 
     @Override
     public Gif findOne(String name) {
