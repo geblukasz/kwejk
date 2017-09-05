@@ -24,4 +24,9 @@ public class GifController {
         modelMap.addAttribute("gif", gifDao.findOne(name));
         return "gif-details";
     }
+
+    @GetMapping("/categories")
+    public String showCategories(){
+        return "categories";
+    }
 }
