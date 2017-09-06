@@ -46,9 +46,4 @@ public class CategoryDaoImpl implements CategoryDao {
         }
         return null;
     }
-
-    public static void main(String[] args) {
-        CategoryDaoImpl categoryDao = new CategoryDaoImpl();
-        System.out.println(categoryDao.searchCategory("Smieszne"));
-    }
 }
