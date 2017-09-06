@@ -77,7 +77,6 @@ public class GifDaoImpl implements GifDao {
     public List<Gif> searchGifsFromCategory(int q) {
         List<Gif> categoryGifs = new ArrayList();
         for (int i=0; i<gifsWithId.size(); i++){
-            System.out.println("List"+gifsWithId.get(i).getCategoryId());
             if (gifsWithId.get(i).getCategoryId()==q){
                 categoryGifs.add(gifsWithId.get(i));
             }
