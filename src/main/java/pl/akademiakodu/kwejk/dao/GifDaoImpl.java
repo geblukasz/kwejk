@@ -19,6 +19,16 @@ public class GifDaoImpl implements GifDao {
         return names;
     }
 
+    public static List<Gif> gifsWithId = new ArrayList<>();
+
+    static {
+        gifsWithId.add(new Gif("android-explosion", "username1", 1));
+        gifsWithId.add(new Gif("ben-and-mike", "username2",2));
+        gifsWithId.add(new Gif("book-dominos", "username3", 3));
+        gifsWithId.add(new Gif("compiler-bot", "username4", 1));
+        gifsWithId.add(new Gif("cowboy-coder", "username5", 1));
+        gifsWithId.add(new Gif("infinite-andrew", "username6", 2));
+    }
     public static void setNames(List<String> names) {
         GifDaoImpl.names = names;
     }
@@ -61,6 +71,18 @@ public class GifDaoImpl implements GifDao {
             }
         }
         return null;
+    }
+
+    @Override
+    public List<Gif> searchGifsFromCategory(int q) {
+        List<Gif> categoryGifs = new ArrayList();
+        for (int i=0; i<gifsWithId.size(); i++){
+            System.out.println("List"+gifsWithId.get(i).getCategoryId());
+            if (gifsWithId.get(i).getCategoryId()==q){
+                categoryGifs.add(gifsWithId.get(i));
+            }
+        }
+        return categoryGifs;
     }
 
 }

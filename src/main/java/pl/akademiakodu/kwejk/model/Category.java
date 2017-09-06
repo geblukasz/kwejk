@@ -3,11 +3,11 @@ package pl.akademiakodu.kwejk.model;
 public class Category {
 
     private String name;
-    private String id;
+    private int id;
 
     public Category(){}
 
-    public Category(String name, String id) {
+    public Category(String name, int id) {
         this.name = name;
         this.id = id;
     }
@@ -20,11 +20,11 @@ public class Category {
         this.name = name;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
